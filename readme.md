@@ -40,6 +40,9 @@ You may also set "id": 1234 (where 1234 is a unique ID) if you want to avoid
 collisions with multiple simultaneous sendings. Read more from the GOIP 
 documentation about $sendid in chapter 3.
 
+The request returns an HTTP status code 200 if sent was successful and code 400 
+with an error message if the sending failed or a timeout occured.
+
 ## GOIP keep alive
 
 keepalive.php listens to GOIP messages in a specific address and port (set in 
