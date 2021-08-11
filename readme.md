@@ -10,7 +10,8 @@ most likely the GOIP manufacturer.
 
 # System requirements
 - A GOIP SMS Gateway
-- Web server with PHP support (for example Apache and PHP 5.6)
+- Web server with PHP support (for example Apache and PHP 5.6/7/8)
+- PHP Socket Extension
 - CLI access for the keepalive.php (not mandatory)
 
 # Installation
@@ -21,6 +22,16 @@ most likely the GOIP manufacturer.
 4. Rename settings_dist.php as settings.php
 5. Fill the blanks in settings.php
 6. Start sending SMS messages through the API
+
+## Docker
+
+You can use the provided Dockerfile to run Apache with PHP. 
+Tested with Docker 20.10 and OpenShift 4.6.
+
+1. Create the settings.php file as per previous instructions
+2. Build the container image: sudo docker build -t fsg .
+3. Run the container: sudo docker run -d -p 8080:8080 --name fsg fsg
+4. The server is now running at localhost port 8080
 
 # Usage
 
