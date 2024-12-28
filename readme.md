@@ -8,6 +8,10 @@ This is a standalone code snippet from a larger software project.
 GOIP documentation (doc/goip_sms_Interface_en.pdf) is property of someone else,
 most likely the GOIP manufacturer.
 
+The counterpart application at https://github.com/iivorait/GoIP-SMS-receiver is
+for receiving SMS messages and forwarding them to email (easy to implement a
+database, MQTT etc. connection instead of email).
+
 # System requirements
 - A GOIP SMS Gateway
 - Web server with PHP support (for example Apache and PHP 5.6/7/8)
